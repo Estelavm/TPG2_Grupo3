@@ -1,7 +1,42 @@
 // 1. Contar vocales en una cadena
 // 2. Muestra el mayor número de un array
-// 3. Calcular la media de un array de números
-// 4. Invertir los elementos de un array
+// 3: Invertir una cadena
+function invertirCadena(cadena) {
+    return cadena.split("").reverse().join("");
+}
+
+// Ejemplos:
+console.log("Solución 3:");
+console.log(invertirCadena("hola")); // Resultado: "aloh"
+console.log(invertirCadena("mundo")); // Resultado: "odnum"
+console.log(invertirCadena("javascript")); // Resultado: "tpircsavaj"
+console.log("///////////////");
+
+/*
+Para invertir una cadena, primero pensé en descomponerla en sus caracteres individuales. 
+El método split("") convierte la cadena en un array de caracteres. Luego, para invertir ese array, usé reverse(), 
+y finalmente, para unir los caracteres en una nueva cadena, utilicé join("").
+*/
+
+// 4: Encontrar el palíndromo
+function esPalindromo(cadena) {
+    const cadenaInvertida = cadena.split("").reverse().join("");
+    return cadena === cadenaInvertida;
+}
+
+// Ejemplos:
+console.log("Solución 4:");
+console.log(esPalindromo("neuquen")); // true
+console.log(esPalindromo("reconocer")); // true
+console.log(esPalindromo("rallar")); // true
+console.log(esPalindromo("javascript")); // false
+console.log("///////////////");
+
+/*
+Para determinar si una cadena es un palíndromo, primero pensé en invertir la cadena 
+usando el mismo enfoque que en el ejercicio anterior (split, reverse, join). Luego comparé 
+la cadena original con su versión invertida. Si son iguales, significa que es un palíndromo.
+*/
 
 // 5. Eliminar elementos duplicados de un array
 function eliminarDuplicados(array) {
