@@ -1,41 +1,40 @@
 // 1. Contar vocales en una cadena
 // 2. Muestra el mayor número de un array
-// 3: Invertir una cadena
-function invertirCadena(cadena) {
-    return cadena.split("").reverse().join("");
+// 3: Calcular la media de un array de números
+function calcularMedia(numeros) {
+    return numeros.reduce(function (a, b) {
+        return a + b;
+    }, 0) / numeros.length;
 }
 
 // Ejemplos:
 console.log("Solución 3:");
-console.log(invertirCadena("hola")); // Resultado: "aloh"
-console.log(invertirCadena("mundo")); // Resultado: "odnum"
-console.log(invertirCadena("javascript")); // Resultado: "tpircsavaj"
+console.log("calcularMedia([1, 2, 3, 4, 5]) ===> " + calcularMedia([1, 2, 3, 4, 5])); // 3
+console.log("calcularMedia([3, 9, 12, 16]) ===> " + calcularMedia([3, 9, 12, 16])); // 10
+console.log("calcularMedia([5, 20, 25, 50]) ===> " + calcularMedia([5, 20, 25, 50])); // 25
 console.log("///////////////");
 
 /*
-Para invertir una cadena, primero pensé en descomponerla en sus caracteres individuales. 
-El método split("") convierte la cadena en un array de caracteres. Luego, para invertir ese array, usé reverse(), 
-y finalmente, para unir los caracteres en una nueva cadena, utilicé join("").
+Para calcular la media de un array, primero sumamos todos los elementos utilizando reduce(),
+que nos permite iterar sobre el array acumulando un resultado. Luego dividimos el total entre
+la cantidad de elementos del array con length.
 */
 
-// 4: Encontrar el palíndromo
-function esPalindromo(cadena) {
-    const cadenaInvertida = cadena.split("").reverse().join("");
-    return cadena === cadenaInvertida;
+// 4: Invertir los elementos de un array
+function invertirArray(array) {
+    return array.reverse();
 }
 
 // Ejemplos:
 console.log("Solución 4:");
-console.log(esPalindromo("neuquen")); // true
-console.log(esPalindromo("reconocer")); // true
-console.log(esPalindromo("rallar")); // true
-console.log(esPalindromo("javascript")); // false
+console.log(invertirArray([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+console.log(invertirArray(["a", "b", "c", "d"])); // ["d", "c", "b", "a"]
+console.log(invertirArray([10, 20, 30, 40])); // [40, 30, 20, 10]
 console.log("///////////////");
 
 /*
-Para determinar si una cadena es un palíndromo, primero pensé en invertir la cadena 
-usando el mismo enfoque que en el ejercicio anterior (split, reverse, join). Luego comparé 
-la cadena original con su versión invertida. Si son iguales, significa que es un palíndromo.
+Para invertir un array, utilizamos el método reverse(), que modifica el array original 
+para cambiar el orden de sus elementos.
 */
 
 // 5. Eliminar elementos duplicados de un array
