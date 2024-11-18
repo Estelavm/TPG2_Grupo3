@@ -1,5 +1,7 @@
 // 1. Contar vocales en una cadena
+
 // 2. Muestra el mayor número de un array
+
 // 3: Calcular la media de un array de números
 function calcularMedia(numeros) {
     return numeros.reduce(function (a, b) {
@@ -15,8 +17,8 @@ console.log("calcularMedia([5, 20, 25, 50]) ===> " + calcularMedia([5, 20, 25, 5
 console.log("///////////////");
 
 /*
-Para calcular la media de un array, primero sumamos todos los elementos utilizando reduce(),
-que nos permite iterar sobre el array acumulando un resultado. Luego dividimos el total entre
+Para calcular la media de un array, primero sumé todos los elementos utilizando reduce(),
+que permite iterar sobre el array acumulando un resultado. Luego dividí el total entre
 la cantidad de elementos del array con length.
 */
 
@@ -33,7 +35,7 @@ console.log(invertirArray([10, 20, 30, 40])); // [40, 30, 20, 10]
 console.log("///////////////");
 
 /*
-Para invertir un array, utilizamos el método reverse(), que modifica el array original 
+Para invertir un array, utilicé el método reverse(), que modifica el array original 
 para cambiar el orden de sus elementos.
 */
 
@@ -52,8 +54,8 @@ function eliminarDuplicados(array) {
 }
 
 console.log(eliminarDuplicados([1, 2, 2, 3, 4, 4, 5])); // [1, 2, 3, 4, 5]
-console.log(eliminarDuplicados([10, 20, 20, 30]));      // [10, 20, 30]
-console.log(eliminarDuplicados([5, 5, 5, 5]));          // [5]
+console.log(eliminarDuplicados([100, 200, 200, 30]));      // [100, 200, 30]
+console.log(eliminarDuplicados([15, 15, 20, 20])); // [15, 20]
 /*Para eliminar los duplicados, utilicé un array vacío (arraySinDuplicados) donde voy agregando los elementos solo si no están ya presentes. 
 Dentro del condicional, usé el método includes para verificar si el elemento ya se encontraba en el nuevo array.
 Sino está, se lo agrega al array con el método push.
@@ -73,8 +75,8 @@ function capitalizarPalabras(cadena) {
 }
 
 console.log(capitalizarPalabras("hola mundo desde javascript")); // "Hola Mundo Desde Javascript"
-console.log(capitalizarPalabras("bienvenidos al curso"));       // "Bienvenidos Al Curso"
-console.log(capitalizarPalabras("javascript es genial"));      // "Javascript Es Genial"
+console.log(capitalizarPalabras("estoy aprendiendo javascript")); // "Estoy Aprendiendo Javascript"
+console.log(capitalizarPalabras("me gusta el mate"));      // "Me Gusta El Mate"
 /*Para este ejercicio, primero dividí la cadena en un array de palabras usando split. 
 Luego, recorrí cada palabra, usando el bucle for, y convertí la primera letra de cada una a mayúscula. 
 Con slice. Devolví el resto de la palabra desde el segundo carácter en adelante, sin modificarlo.
@@ -93,7 +95,7 @@ function fibonacci(n) {
 }
 
 console.log(fibonacci(5));  // [0, 1, 1, 2, 3]
-console.log(fibonacci(7));  // [0, 1, 1, 2, 3, 5, 8]
-console.log(fibonacci(3));  // [0, 1, 1]
+console.log(fibonacci(9));  // [0, 1, 1, 2, 3, 5, 8]
+console.log(fibonacci(11));  // [0, 1, 1]
 /*Para generar la sucesión de Fibonacci, empecé con los dos primeros números [0, 1], luego fui sumando los dos números anteriores para obtener el siguiente número. 
 Utilicé slice para devolver los primeros números de la secuencia que sean solicitados.*/
