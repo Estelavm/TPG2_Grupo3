@@ -95,7 +95,7 @@ function fibonacci(n) {
 }
 
 console.log(fibonacci(5));  // [0, 1, 1, 2, 3]
-console.log(fibonacci(9));  // [0, 1, 1, 2, 3, 5, 8]
-console.log(fibonacci(11));  // [0, 1, 1]
+console.log(fibonacci(9));  // [0, 1, 1, 2, 3, 5, 8, 13, 21]
+console.log(fibonacci(11));  // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 /*Para generar la sucesión de Fibonacci, empecé con los dos primeros números [0, 1], luego fui sumando los dos números anteriores para obtener el siguiente número. 
 Utilicé slice para devolver los primeros números de la secuencia que sean solicitados.*/
