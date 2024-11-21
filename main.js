@@ -1,6 +1,51 @@
 // 1. Contar vocales en una cadena
+function contarVocales(cadena) {
+    // Definir las vocales
+    const vocales = "aeiouAEIOU";
+    let contador = 0;
+
+    // Recorrer cada carácter de la cadena
+    for (let char of cadena) {
+        if (vocales.includes(char)) {
+            contador++;
+        }
+    }
+
+    // Mostrar el resultado en la consola
+    console.log(cadena + " tiene " + contador + " vocales.");
+    return contador;
+}
+
+// Ejemplos:
+console.log("Solución 1:");
+contarVocales("JavaScript"); // Resultado: 3
+contarVocales("grupo"); // Resultado: 2
+contarVocales("FrontEnd"); // Resultado: 2
+console.log("///////////////");
+
 
 // 2. Muestra el mayor número de un array
+
+function encontrarNumeroMasAlto(array) {
+    let numeroMasAlto = array[0]; // Inicializamos con el primer elemento del array
+
+    for (let numero of array) {
+        if (numero > numeroMasAlto) {
+            numeroMasAlto = numero; // Actualizamos si encontramos un número mayor
+        }
+    }
+    return numeroMasAlto;
+}
+
+// Ejemplos:
+console.log("Solución 2:");
+const arrayNumerosA = [3, 7, 2, 15, 9];
+console.log("El número mas alto del arrayNumerosA ("+ arrayNumerosA + ") es: " + encontrarNumeroMasAlto(arrayNumerosA)); // Resultado: 15
+const arrayNumerosB = [10, 33, 53, 2, 8];
+console.log("El número mas alto del arrayNumerosB ("+ arrayNumerosB + ") es: " + encontrarNumeroMasAlto(arrayNumerosB)); // Resultado: 53
+const arrayNumerosC = [67, 201, 56, 55, 99];
+console.log("El número mas alto del arrayNumerosC ("+ arrayNumerosC + ") es: " + encontrarNumeroMasAlto(arrayNumerosC)); // Resultado: 201
+console.log("///////////////");
 
 // 3: Calcular la media de un array de números
 function calcularMedia(numeros) {
